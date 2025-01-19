@@ -206,7 +206,7 @@ export class Pool {
         amountSpecified: JSBI,
         sqrtPriceLimitX96?: JSBI
     ): Promise<{ amountCalculated: JSBI; sqrtRatioX96: JSBI; liquidity: JSBI; tickCurrent: number }> {
-        return vSwap(
+        return v2Swap(
             JSBI.BigInt(this.fee),
             this.sqrtRatioX96,
             this.tickCurrent,
